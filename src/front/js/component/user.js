@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import { Link } from "react-router-dom";
 import "../../styles/home.css";
 
 
@@ -28,8 +29,22 @@ export const User = () => {
     }, []);
 
 	return (
+        <div>
+        <nav className="navbar navbar-light bg-light">
+			<div className="container">
+				<Link to="/">
+					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				</Link>
+				<div className="ml-auto">
+					<Link to="/">
+						<button className="btn btn-primary me-1">Log out</button>
+					</Link>
+				</div>
+            </div>
+		</nav>
 		<div className="text-center mt-5">
 			<h1>Login exitoso!!</h1>
+		</div>
 		</div>
 	);
 };
