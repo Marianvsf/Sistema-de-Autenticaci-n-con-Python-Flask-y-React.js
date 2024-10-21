@@ -19,7 +19,7 @@ bcrypt = Bcrypt(app)
 def handle_hello():
 
     response_body = {
-        "message": "Hello! To start you have to sign up!"
+        "message": "Welcome! Please create an account or log into your existing one to continue."
     }
 
     return jsonify(response_body), 200
