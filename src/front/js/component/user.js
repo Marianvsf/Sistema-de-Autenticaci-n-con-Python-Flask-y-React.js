@@ -28,6 +28,10 @@ export const User = () => {
         fetchProtectedData();
     }, []);
 
+    const logOut = () => {
+        localStorage.clear()
+    }
+
 	return (
         <div>
         <nav className="navbar navbar-light bg-light">
@@ -37,7 +41,7 @@ export const User = () => {
 				</Link>
 				<div className="ml-auto">
 					<Link to="/">
-						<button className="btn btn-primary me-1">Log out</button>
+						<button onClick={logOut} className="btn btn-primary me-1">Log out</button>
 					</Link>
 				</div>
             </div>

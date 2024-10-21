@@ -58,6 +58,7 @@ def user_login():
     token = create_access_token(identity=user.id, additional_claims={"role": "admin"})
     return jsonify({"token": token})
 
+# Protege una ruta con jwt_required, bloquea las peticiones sin un JWT válido
 @api.route("/private", methods=["GET"])
 @jwt_required()
 def protected():

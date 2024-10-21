@@ -10,6 +10,7 @@ const Login = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         
+        
         const response = await fetch('https://refactored-meme-q79xjr76v45xh6gx7-3001.app.github.dev/api/login', {
             method: 'POST',
             headers: {
