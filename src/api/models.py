@@ -1,5 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 
+
 db = SQLAlchemy()
 
 class User(db.Model):
@@ -17,3 +18,8 @@ class User(db.Model):
             "email": self.email,
             # do not serialize the password, its a security breach
         }
+    
+
+class TokenBlockedList(db.Model):
+    id=db.Column(db.Integer, primary_key=True)
+    jti=db.Column(db.String(50), unique=True, nullable=False)
