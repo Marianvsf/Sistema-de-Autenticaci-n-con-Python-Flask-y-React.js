@@ -44,7 +44,7 @@ export const User = () => {
         if (response.ok) {
             localStorage.removeItem('token');
             console.log('Sesión cerrada');
-            navigate('/login');
+            navigate('/login', { replace: true });
         } else {
             const errorData = await response.json();
             console.error('Error al cerrar sesión:', errorData);
